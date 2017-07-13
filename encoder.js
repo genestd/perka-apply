@@ -24,6 +24,7 @@ request({
     body: application
 },  function (error, resp, body) {
       if(error){ console.log(error)}
-      fs.writeFileSync('output.txt', body)
+      console.log(body)
+      fs.writeFileSync('output.txt', JSON.stringify(body))
     }
 )
